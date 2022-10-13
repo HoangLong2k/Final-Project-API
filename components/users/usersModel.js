@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema(
     dataSubmitted: {
       type: Array,
     },
+    role: {
+      type: String,
+    },
   },
   {
     collection: "web-application/user",

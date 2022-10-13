@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", require("./components/users/usersRoute"));
 app.use("/getAllDataSubmitted", require("./components/admin/adminRoute"));
+app.use("/getAll", require("./components/admin/adminRoute"));
 app.use(
   "/registration",
   require("./components/registration/retristrationRoute")

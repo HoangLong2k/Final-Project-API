@@ -12,4 +12,9 @@ module.exports = {
       res.json({ message: err });
     }
   },
+
+  getDataAdmin: async (req, res) => {
+    try {
+    } catch {}
+  },
 };
