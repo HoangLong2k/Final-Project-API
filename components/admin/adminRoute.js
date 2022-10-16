@@ -4,6 +4,6 @@ const router = express.Router();
 const adminCtrl = require("./adminController");
 
 router.post("", adminCtrl.getData);
-router.post("/admin", adminCtrl.getDataAdmin);
+router.post("/ad", adminCtrl.getDataAdmin);
 
 module.exports = router;

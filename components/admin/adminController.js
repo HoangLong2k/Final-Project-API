@@ -15,6 +15,10 @@ module.exports = {
 
   getDataAdmin: async (req, res) => {
     try {
-    } catch {}
+      const data = await Registration.find();
+      res.json(data);
+    } catch (err) {
+      res.json({ message: err });
+    }
   },
 };
