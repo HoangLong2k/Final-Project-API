@@ -29,11 +29,17 @@ module.exports = {
     const { username, password } = req.body;
     const user = await UserModel.findOne({ username: username });
     if (user === null) {
-      return res.send("Invalid-username-or-password.");
+      return res.json({
+        message: "Invalid-username-or-password",
+        statusCode: 400,
+      });
     }
     const rs = bcrypt.compareSync(password, user.password);
     if (rs === false) {
-      return res.send("Invalid-username-or-password.");
+      return res.json({
+        message: "Invalid-username-or-password",
+        statusCode: 400,
+      });
     }
     const { role } = user;
     sendToken(user, 200, res, "Login-success", role);
