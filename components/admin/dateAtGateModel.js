@@ -25,6 +25,10 @@ const submittedSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  dob: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Submitted", submittedSchema);

@@ -34,6 +34,10 @@ const registrationSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide timeOut"],
     },
+    dob: {
+      type: String,
+      required: [true, "Please provide dob"],
+    },
   },
   {
     collection: "web-application/user",
