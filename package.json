@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node":"14.x"
+    "node": "14.x"
   },
+  "main": "./bin/www",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
